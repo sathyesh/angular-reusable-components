@@ -1,0 +1,49 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<h2>
+  Data Binding Example
+</h2>
+<hr>
+<app-data-binding-article [articleObj]='exampleArticle'>
+</app-data-binding-article>
+<br/>
+<h2>
+  ng-content Example
+</h2>
+<hr>
+<app-ng-content-article>
+  <header>My Article Header 1</header>
+  <body style="color:blue;">my article body 1 using ng-content but different body color</body>
+  <footer>My Article Footer 1</footer>
+</app-ng-content-article>
+<br />
+<app-ng-content-article>
+  <header style="color:red;">My Article Header 2</header>
+  <body>my article body 2 using ng-content</body>
+  <footer>My Article Footer 2</footer>
+</app-ng-content-article>
+
+<br/>
+
+
+
+<ng-template #articleTemplate>
+  <h3 header style="color:purple;">My Article Header 4</h3>
+  <p body>my article body 4 using ng-template</p>
+  <h3 footer>My Article Footer 4</h3>
+</ng-template>
+<br />
+<h2>
+  ng template Example
+</h2>
+<hr>
+<app-ng-template-article [articleTemplate]='articleTemplate'>
+</app-ng-template-article>
+<br/>
+<app-ng-template-article>
+</app-ng-template-article>
